@@ -1,244 +1,396 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>G K SREEPADHA | Cloud Security Architect</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sreepadha GK – Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap');
 
-<style>
-body {
-    margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #f4f6f8;
-    color: #333;
-}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    .header-container {
-    position: relative;
-    text-align: center;
-    padding-top: 20px;
-}
-
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-.contact-box {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #f0f4f8;
-    color: #333;
-    border: 1px solid #ddd;
-    padding: 8px 15px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 32px;
-}
-
-header p {
-    margin: 5px 0;
-    color: #666;
-}
-
-.section {
-    margin-bottom: 30px;
-}
-
-.section h2 {
-    border-bottom: 2px solid #007acc;
-    padding-bottom: 5px;
-    color: #007acc;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-.job {
-    margin-bottom: 20px;
-}
-
-.job h3 {
-    margin: 0;
-}
-
-.job span {
-    font-size: 14px;
-    color: #777;
-}
-
-.badge {
-    display: inline-block;
-    background: #e6f2ff;
-    color: #005fa3;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin: 5px 5px 0 0;
-    font-size: 13px;
-}
-
-footer {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
-    color: #777;
-}
-
-@media (max-width: 600px) {
-    .container {
-        margin: 10px;
-        padding: 20px;
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #f0f2f5;
+      color: #222;
+      font-size: 13px;
+      line-height: 1.55;
     }
-}
-</style>
+
+    .resume-wrapper {
+      max-width: 960px;
+      margin: 30px auto;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.18);
+      border-radius: 4px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    /* ── LEFT SIDEBAR ── */
+    .sidebar {
+      background: #1a2a3a;
+      color: #dce8f0;
+      padding: 32px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .sidebar-section-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #7eb8d4;
+      border-bottom: 1px solid #2e4a60;
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar p, .sidebar li {
+      font-size: 12px;
+      color: #c8dce8;
+      line-height: 1.6;
+    }
+
+    .sidebar ul { list-style: none; padding: 0; }
+    .sidebar ul li { padding: 2px 0; }
+    .sidebar ul li::before {
+      content: '▸ ';
+      color: #7eb8d4;
+      font-size: 10px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 7px;
+      font-size: 12px;
+      color: #c8dce8;
+    }
+    .contact-item .icon { color: #7eb8d4; font-size: 13px; min-width: 16px; }
+
+    .edu-entry { margin-bottom: 12px; }
+    .edu-entry .degree {
+      font-size: 12px;
+      font-weight: 600;
+      color: #e0edf5;
+      line-height: 1.4;
+    }
+    .edu-entry .school {
+      font-size: 11px;
+      color: #9ab8cc;
+      margin-top: 1px;
+    }
+
+    /* ── RIGHT MAIN ── */
+    .main {
+      background: #fff;
+      padding: 36px 34px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* Header */
+    .header-name {
+      font-family: 'Raleway', sans-serif;
+      font-size: 34px;
+      font-weight: 800;
+      color: #1a2a3a;
+      letter-spacing: 1px;
+      line-height: 1.1;
+    }
+    .header-tagline {
+      font-size: 12.5px;
+      color: #4a6a80;
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    .section-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #1a2a3a;
+      border-bottom: 2px solid #7eb8d4;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+    }
+
+    .summary-text {
+      font-size: 12.5px;
+      color: #333;
+      line-height: 1.65;
+    }
+
+    /* Experience */
+    .job { margin-bottom: 18px; }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .job-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #1a2a3a;
+    }
+    .job-period {
+      font-size: 11px;
+      color: #7eb8d4;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .job-company {
+      font-size: 12px;
+      color: #4a6a80;
+      font-weight: 600;
+      margin-top: 1px;
+    }
+    .job-practice {
+      font-size: 11.5px;
+      color: #7a9aaa;
+      font-style: italic;
+      margin-bottom: 5px;
+    }
+    .job ul {
+      padding-left: 16px;
+      margin-top: 4px;
+    }
+    .job ul li {
+      font-size: 12px;
+      color: #333;
+      padding: 2px 0;
+      line-height: 1.55;
+    }
+
+    .section { }
+  </style>
 </head>
-
 <body>
+<div class="resume-wrapper">
 
-<div class="container">
+  <!-- ══ SIDEBAR ══ -->
+  <aside class="sidebar">
 
-<header>
-    <h1>G K SREEPADHA</h1>
-    <p>Associate Director | Cloud Security Architect | Cybersecurity, Architecture and Engineering</p>
-    <p>Bangalore, India | Ph: +91-9600067229 | itsgkaranam@gmail.com</p>
-</header>
+    <!-- Career Objective -->
+    <div>
+      <div class="sidebar-section-title">Career Objective</div>
+      <p>To lead enterprise security and GRC initiatives by architecting secure multi-cloud ecosystems, optimizing risk posture, and embedding security-by-design principles across digital transformation programs.</p>
+    </div>
 
-<section class="section">
-    <h2>Professional Summary</h2>
-    <p>
-        Security professional with 15+ years of experience in Governance, Risk, and Compliance 
-        across Application, Infrastructure, and Cloud environments. Expertise in AWS, Azure, 
-        and Google Cloud security architecture, regulatory compliance, and enterprise risk management.
-    </p>
-</section>
+    <!-- Career Goal -->
+    <div>
+      <div class="sidebar-section-title">Career Goal</div>
+      <p>To secure a challenging role in IT Security and multi-cloud architecture where I can apply my GRC and cloud expertise skills to strengthen cybersecurity posture, manage risk, and ensure regulatory compliance.</p>
+    </div>
 
-<section class="section">
-    <h2>Education</h2>
-    <ul>
-        <li>M.Sc. Computer Science | Sri Venkateswara University, Tirupati, Andhra Pradesh, India</li>
-        <li>Masters in Business Administration | Sri Venkateswara University, Tirupati, Andhra Pradesh, India</li>
-        <li>Bachelor of Commerce specialized in Computer Applications | Sri Krishnadevaraya University, Anantapur, Andhra Pradesh, India</li>
-    </ul>
-</section>
+    <!-- Contact -->
+    <div>
+      <div class="sidebar-section-title">Contact Details</div>
+      <div class="contact-item"><span class="icon">✉</span> itsgkaranam@gmail.com</div>
+      <div class="contact-item"><span class="icon">☎</span> +91-9600067229</div>
+      <div class="contact-item"><span class="icon">⌖</span> Bengaluru, India</div>
+    </div>
 
-<section class="section">
-    <h2>Certifications</h2>
-    <ul>
-        <li>CISA | CISM | and CRISC</li>
-        <li>CCSK | CCAK</li>
+    <!-- Education -->
+    <div>
+      <div class="sidebar-section-title">Educational Qualification</div>
+      <div class="edu-entry">
+        <div class="degree">Master's in Computer Science</div>
+        <div class="school">Sri Venkateswara University, Tirupati, Andhra Pradesh, India</div>
+      </div>
+      <div class="edu-entry">
+        <div class="degree">Master of Business Administration</div>
+        <div class="school">Sri Venkateswara University, Tirupati, Andhra Pradesh, India</div>
+      </div>
+      <div class="edu-entry">
+        <div class="degree">Bachelor of Commerce – Computer Applications</div>
+        <div class="school">Sri Krishnadevaraya University, Anantapur, Andhra Pradesh, India</div>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div>
+      <div class="sidebar-section-title">Skills Set</div>
+      <ul>
+        <li>Cloud Security – AWS, Azure, GCP</li>
+        <li>Governance, Risk and Compliance</li>
+        <li>Enterprise Risk Management</li>
+        <li>Vendor Risk Management</li>
+        <li>CIS v8 Benchmark</li>
+        <li>NIST RMF</li>
+        <li>GDPR Privacy Controls</li>
+        <li>COBIT</li>
+        <li>Application and General Controls</li>
+        <li>PCI DSS</li>
+        <li>ServiceNow GRC</li>
+        <li>IAM and PAM Governance</li>
+        <li>Vulnerability Management &amp; Penetration Testing</li>
+        <li>Threat Modelling</li>
+      </ul>
+    </div>
+
+    <!-- Certifications -->
+    <div>
+      <div class="sidebar-section-title">Certifications</div>
+      <ul>
+        <li>Certified Information Systems Auditor</li>
+        <li>Certified Information Security Manager</li>
+        <li>CRISC</li>
+        <li>Certified Cloud Security Knowledge</li>
+        <li>Certified Cloud Auditing Knowledge</li>
         <li>ISO 27001 Lead Auditor</li>
-        <li>Certified Payment Card Industry Security Implementer (CPISI)</li>
-        <li>TOGAF v10 | ITIL v3 | COBIT 5 Foundation</li>
-        <li>SAP LeanIX Practitioner</li>
-        <li>AWS Solutions Architect - Professional</li>
+        <li>Computer System Validation – IGMPI</li>
+        <li>PCI DSS Security Implementer – SISA</li>
+        <li>TOGAF v10 Enterprise Architecture Practitioner</li>
+        <li>SAP LeanIX Certified Practitioner</li>
+        <li>COBIT 5 Foundation</li>
+        <li>ITIL v3 Foundation – EXIN and AXELOS</li>
+        <li>AWS Solutions Architect – Professional</li>
         <li>AWS Security Specialty</li>
         <li>Google Professional Cloud Security Engineer</li>
         <li>AZ-500 Azure Security Engineer</li>
-    </ul>
-</section>
-
-<section class="section">
-    <h2>Core Skills</h2>
-    <div class="badge">Cloud Security (AWS, Azure, and GCP)</div>
-    <div class="badge">Governance, Risk, and Compliance</div>
-    <div class="badge">Enterprise Risk Management</div>
-    <div class="badge">Third Party Security and Risk Management</div>
-    <div class="badge">IT Application and General Computing Controls (ITGC and ITAC)</div>
-    <div class="badge">PCI DSS, ISO 27001, SOC 2, NIST, and CIS Benchmark</div>
-    <div class="badge">Identity Access Management and Privileged Access Management</div>
-    <div class="badge">Application and Infrastructure Security</div>
-    <div class="badge">Vulnerability Management and Penetration Testing</div>
-    <div class="badge">ServiceNow GRC</div>
-</section>
-    
-<section class="section">
-    <h2>Professional Experience</h2>
-
-    <div class="job">
-        <h3>Associate Director – Cloud Security Architect</h3>
-        <span>Enterprise CIO / CISO Team - Cybersecurity, Architecture and Engineering | Kyndryl India | Remote | Oct 2021 – Present</span>
-        <ul>
-            <li>Designed and implemented a Secure by Design framework for cloud-based solutions.</li>
-            <li>Reviewed and approved technical cloud security architectures across AWS, Azure, and GCP, supporting both CIO and non-CIO aligned solutions.</li>
-            <li>Designed and implemented a CSPM framework aligned to CCM/CAIQ, ISO 27001, and SOC 2 control requirements.</li>
-            <li>Managed the review and approval process for enterprise TPRMs and global privacy compliance assessments.</li>
-            <li>Led risk and compliance initiatives using ServiceNow GRC.</li>
-            <li>Designed an open-source software governance framework and managed its review and approval</li>
-        </ul>
+        <li>Microsoft Certified – Azure AI Engineer Associate</li>
+        <li>AWS Certified AI Practitioner</li>
+      </ul>
     </div>
 
-    <div class="job">
-        <h3>Security Architect</h3>
-        <span>Enterprise Security and Risk Management (ESRM) Practice | Tech Mahindra Ltd., | Bangalore, India | Dec 2017 – Oct 2021</span>
-        <ul>
-            <li>Established a control-aligned security architecture framework based on NIST SP 800-53 and CIS Benchmarks.</li>
-            <li>Conducted SOC 2 audits and third-party risk assessments.</li>
-            <li>Developed comprehensive Information Security policies and supporting standards and procedures.</li>
-        </ul>
+  </aside>
+
+  <!-- ══ MAIN CONTENT ══ -->
+  <main class="main">
+
+    <!-- Name / Header -->
+    <div>
+      <div class="header-name">SREEPADHA G K</div>
+      <div class="header-tagline">IT Security &amp; GRC Leader &nbsp;|&nbsp; Multi-Cloud Architect &nbsp;|&nbsp; 17+ Years of Experience</div>
     </div>
 
-    <div class="job">
-        <h3>IT Security - Consulting Manager</h3>
-        <span>Risk, Compliance, Data Privacy and Architecture (RCDA) Practice | Wipro Technologies Ltd., | Bangalore, India | May 2016 - Dec 2017</span>
-        <ul>
-            <li>Developed Enterprise Security and Risk Management framework based on GAMP5 of GxP related to Computer System Validation.</li>
-            <li>Conducted IT/OT risk assessments for pharmaceutical manufacturing devices—including PLC, SCADA, and ICS systems—aligned with 21 CFR Part 11 (FDA) and EU GMP Annex 11 compliance requirements.</li>
-            <li>Developed comprehensive Information Security policies and supporting standards and procedures.</li>
-        </ul>
+    <!-- Summary -->
+    <div class="section">
+      <div class="section-title">Summary</div>
+      <p class="summary-text">
+        With over 17 years of experience as a security professional, I designed and implemented enterprise-wide IT Governance, Risk, and Compliance (GRC) frameworks, and Cloud Security frameworks across Finance, Banking, Insurance, Retail, Telecom, Healthcare, and Pharma sectors. I specialize in bridging the gap between management and operations teams to strengthen security architecture, improve compliance processes, streamline initiatives, and drive organizational efficiency. My goal is to contribute to organizational success by enabling secure, scalable, and resilient IT and ITES environments.
+      </p>
+      <p class="summary-text" style="margin-top:8px;">
+        Expertise in AWS, Azure, and Google Cloud security architecture design reviews, regulatory compliance alignment, and developing enterprise risk management across diverse industry environments. Proven ability to assess cloud security posture, implement robust controls, and ensure adherence to global regulatory and industry standards.
+      </p>
     </div>
 
-    <div class="job">
-        <h3>IT Security - Technical Specialist</h3>
-        <span>Identity Access and Privileged Access Governance Practice | GRMS IT Consulting Services Pvt Ltd | Chennai, India | May 2014 - May 2016</span>
+    <!-- Professional Experience -->
+    <div class="section">
+      <div class="section-title">Professional Experience</div>
+
+      <!-- Job 1 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Associate Director</span>
+          <span class="job-period">November 2021 – Present</span>
+        </div>
+        <div class="job-company">Kyndryl India &nbsp;|&nbsp; Remote</div>
+        <div class="job-practice">Enterprise CIO / CISO Team – Cybersecurity, Architecture and Engineering Practice</div>
         <ul>
-            <li>Led Identity and Access Management (IAM) and Privileged Access Management (PAM) governance programs in accordance with TRM regulatory requirements.</li>
-            <li>Deployed and enforced MFA controls across ~5,000 enterprise-critical systems, enhancing access security, strengthening identity governance, and mitigating authentication-related risks.</li>
-            <li>Onboarded 5,000+ enterprise systems for centralized log monitoring, enhancing threat detection, operational visibility, and security incident response capabilities.</li>
+          <li>Designed and implemented Secure by Design framework for cloud-based solutions.</li>
+          <li>Reviewed and approved technical cloud security architectural artifacts across AWS, Azure, and GCP, supporting both CIO and non-CIO aligned solutions.</li>
+          <li>Designed and implemented a CSPM framework aligned to CCM / CAIQ, PCI DSS, CIS, NIST, ISO 27001, SOC 2 control requirements.</li>
+          <li>Led enterprise risk, compliance, vendor management / TPRM, and global privacy assessments using Microsoft SharePoint, ServiceNow GRC and OneTrust.</li>
+          <li>Developed an open-source software governance framework and led its review and approval through security scanning, technical risk assessments, and threat modeling.</li>
+          <li>Designed, tested and implemented AI agents with Microsoft Copilot Studio for enterprise use to review the security gaps in Architectural Design documentation.</li>
         </ul>
-    </div>
+      </div>
 
-    <div class="job">
-        <h3>IT Security - Systems Associate</h3>
-        <span>SOX 404 IT Control Internal Audit and IAM Governance | iGATE Global Solutions | Chennai, India | December 2008 - March 2014</span>
+      <!-- Job 2 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Cloud Security Architect</span>
+          <span class="job-period">December 2017 – October 2021</span>
+        </div>
+        <div class="job-company">Tech Mahindra Ltd. &nbsp;|&nbsp; Bangalore, India</div>
+        <div class="job-practice">Enterprise Security and Risk Management (ESRM) Practice</div>
         <ul>
-            <li>Led Identity and Access Management (IAM) governance program in accordance with SOX Sec 404 IT Controls and COBIT Framework.</li>
-            <li>Managed day-to-day SOX compliance activities for IT controls, including resource coordination, testing oversight, documentation, and issue tracking, ensuring timely closure of control gaps.</li>
-            <li>Reviewed and validated design documentations, TOD test plans, TOE results, and SSAE No.16 reports for banking and financial applications, including mission critical solutions, aligned with COBIT control areas.</li>
+          <li>Established a control-aligned security architecture framework based on NIST SP 800-53, CIS v8 Benchmarks, PCI DSS, and ISO 27k standard.</li>
+          <li>Executed GAP assessments, PCI DSS, SOC 2, and third-party risk assessments.</li>
+          <li>Developed comprehensive Information Security policies, supporting standards, procedures, and guidelines per regulatory requirements for Telecom &amp; Insurance projects.</li>
+          <li>Developed and enforced Data Loss Prevention (DLP) policy governance across enterprise systems.</li>
         </ul>
+      </div>
+
+      <!-- Job 3 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Consulting Manager</span>
+          <span class="job-period">May 2016 – December 2017</span>
+        </div>
+        <div class="job-company">Wipro Technologies Ltd. &nbsp;|&nbsp; Bangalore, India</div>
+        <div class="job-practice">Risk, Compliance, Data Privacy and Architecture (RCDA) Practice</div>
+        <ul>
+          <li>Developed Enterprise Security Risk Management and Computer System Validation framework based on GAMP 5 of GxP / cGMP related to Computer System Validation.</li>
+          <li>Conducted IT/OT risk assessments for pharmaceutical manufacturing devices—including PLC, SCADA, and ICS systems—aligned with 21 CFR Part 11 (USFDA) and EU GMP Annex 11 compliance requirements.</li>
+          <li>Executed verification &amp; validation control protocol &amp; procedures per FDA regulatory requirements.</li>
+        </ul>
+      </div>
+
+      <!-- Job 4 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Technical Specialist</span>
+          <span class="job-period">May 2014 – May 2016</span>
+        </div>
+        <div class="job-company">GRMS IT Consulting Pvt Ltd. &nbsp;|&nbsp; Chennai, India</div>
+        <div class="job-practice">Identity and Privileged Access Governance Practice</div>
+        <ul>
+          <li>Designed and strengthened security controls within the IAM and PAM governance framework to meet regulatory and compliance requirements.</li>
+          <li>Designed and enforced Role-Based Access Control (RBAC) across domain, network, server infrastructure, web-based applications, and database systems.</li>
+          <li>Enabled MFA for mission-critical applications and infrastructure to strengthen authentication security.</li>
+          <li>Established logging, review, monitoring, and backup procedures.</li>
+        </ul>
+      </div>
+
+      <!-- Job 5 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Systems Associate</span>
+          <span class="job-period">December 2008 – March 2014</span>
+        </div>
+        <div class="job-company">iGATE Global Solutions &nbsp;|&nbsp; Chennai, India</div>
+        <div class="job-practice">SOX 404 IT General and Application Control Practice</div>
+        <ul>
+          <li>Reviewed and validated design documentation including TOD test plans, TOE results, and SSAE No.16 reports for banking, financial, and mission-critical applications, aligned with COBIT control areas.</li>
+          <li>Managed day-to-day SOX compliance activities for IT application and general controls, including resource coordination, testing oversight, documentation, risk register, and issue tracking.</li>
+          <li>Aligned with internal and external audit teams, risk and operational management, and business owners to ensure timely resolution of compliance issues.</li>
+        </ul>
+      </div>
+
+      <!-- Job 6 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Credit Risk Officer</span>
+          <span class="job-period">April 2007 – November 2008</span>
+        </div>
+        <div class="job-company">SPARSH BPO Services Pvt Ltd. &nbsp;|&nbsp; Bengaluru, India</div>
+        <div class="job-practice">Credit, Risk, and Operational Practice</div>
+        <ul>
+          <li>Identified and documented control gaps, quality and operational risks, regulatory and compliance deficiencies; escalated high-risk findings and provided remediation recommendations.</li>
+          <li>Coordinated with Internal Audit, External Audit, Risk Management, and Business Owners to track remediation efforts and ensure timely closure of audit findings.</li>
+          <li>Ensured strong adherence to data confidentiality and privacy controls, particularly for SPII and financial data within BFS environments.</li>
+          <li>Managed third-party assurance reviews, ensuring vendor compliance with regulatory and security requirements.</li>
+        </ul>
+      </div>
+
     </div>
-    
-</section>
-
-<footer>
-    © 2026 G K Sreepadha | Cloud Security & Enterprise Risk Leader
-</footer>
-
+  </main>
 </div>
-
 </body>
 </html>
